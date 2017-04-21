@@ -1,0 +1,38 @@
+
+{
+  "products" : [
+    {
+      "id": "twin-ion-engine-starfighter",
+      "image": "twin-ion-engine-starfighter-t.png"
+    },
+    {
+      "id": "t-65-x-wing-starfighter",
+      "image":  "t-65-x-wing-starfighter-t.png"
+    },
+    {
+      "id": "y-wing-starfighter",
+      "image": "y-wing-starfighter-t.png"
+    },
+    {
+      "id": "yt-1300-light-freighter",
+      "image": "yt-1300-light-freighter-t.png"
+    },
+    {
+      "id": "lambda-class-t-4a-shuttle",
+      "image": "lambda-class-t-4a-shuttle-t.png"
+    },
+    {
+      "id": "alpha-class-xg-1-star-wing",
+      "image": "alpha-class-xg-1-star-wing-t.png"
+    },
+
+    {
+      "id": "rz-1-a-wing-interceptor",
+      "image": "rz-1-a-wing-interceptor-t.png"
+    },
+    {
+      "id": "b-wing-heavy-assault-starfighter",
+      "image": "b-wing-heavy-assault-starfighter-t.png"
+    }
+  ]
+}

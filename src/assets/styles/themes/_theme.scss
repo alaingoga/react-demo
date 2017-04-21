@@ -1,0 +1,109 @@
+body {
+  font-family: 'Kanit', sans-serif;
+  background-color: #000;
+  color: $gray-lighter;
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  position: relative;
+  z-index: 2;
+}
+
+.skin {
+  background-image: url('/images/backgrounds/starwars.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+}
+
+.headline {
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: #000 1px 0 10px;
+}
+
+.main{
+  text-align: center;
+  opacity: .7;
+  color: $yellow;
+  margin-bottom: 60px;
+  border-bottom: solid $gray-light 1px;
+  &-headline {
+    @extend .headline;
+    font-size: 2.5em;
+    margin-top: 10px;
+  }
+  &-description {
+    text-transform: capitalize;
+  }
+}
+
+.logo {
+  background-color: white;
+  background-image: url("/images/backgrounds/WattoHS.jpg");
+  background-size: cover;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-top: 10px;
+}
+
+.spinner {
+  width: 100%;
+  height:300px;
+  position: relative;
+  &-image {
+    border-radius: 20px;
+    border: solid $gray-light 1px;
+    width: 300px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    opacity: .5;
+  }
+}
+
+.price-cont {
+  margin: 20px;
+}
+
+.price {
+  font-size: 1.5em;
+}
+
+
+.button {
+  border-radius: 10px;
+  border: solid $gray-light 1px;
+  background-color: #444;
+  padding: 3px 38px;
+  color: #fff;
+  font-family: 'Kanit', sans-serif;
+  text-transform: uppercase;
+  text-shadow: #000 1px 0 10px;
+  &-buy {
+    @extend .button;
+    color: $yellow;
+  }
+  &-cust {
+    @extend .button;
+  }
+}
+
+.label {
+  &-cont {
+    border-bottom: solid $gray-light 1px;
+  }
+  &-value {
+    color: darken($gray-lighter, 30%)
+  }
+}
+

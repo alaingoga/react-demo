@@ -1,0 +1,9 @@
+.product {
+  position: relative;
+  &-image{
+    width: 100%;
+    @include media-breakpoint-up(md) {
+      @include v-align();
+    }
+  }
+}

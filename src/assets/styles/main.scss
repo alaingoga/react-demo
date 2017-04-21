@@ -1,0 +1,15 @@
+@import '~bootstrap/scss/variables';
+@import 'variables/bootstrap';
+
+@import '~bootstrap/scss/mixins';
+
+@import '~bootstrap/scss/normalize';
+@import '~bootstrap/scss/reboot';
+@import '~bootstrap/scss/bootstrap-grid';
+@import '~bootstrap/scss/utilities/text';
+@import '~bootstrap/scss/utilities/flex';
+
+@import 'mixins/aligment';
+@import 'themes/theme';
+@import 'components/card';
+@import 'components/product';
