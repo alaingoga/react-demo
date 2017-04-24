@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router';
 
 const Card = (props) => {
   const imagePath = '/images/products/';
@@ -8,7 +9,7 @@ const Card = (props) => {
     <article key={product.id} className="col-md-3">
       <div className="card-cont text-center">
         {product.id &&
-        <a href={`/product/${product.id}`}>
+        <Link to={`/product/${product.id}`}>
           <button className="button-cust">Customize</button>
           {product.image &&
             <div className="card-image-wrapper">
@@ -17,7 +18,7 @@ const Card = (props) => {
           }
           <span className="card-brand">{product.manufacturer}</span>
           <h2 className="card-headline">{product.name}</h2>
-        </a>
+        </Link>
       }
       </div>
     </article>
