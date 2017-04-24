@@ -8,9 +8,9 @@ import ProductDetails from '../elements/ProductDetails';
  */
 const Product = (props) => {
   // Id is been passed by router
-  const id = props.params.id;
+  const id = props.match.params.id;
   // Product is a property of router
-  const prods = props.route.prods;
+  const prods = props.prods;
   // Matching the product id on main products array
   const matchProd = Shell.findItem(id, 'id', prods);
   return (
@@ -23,8 +23,8 @@ const Product = (props) => {
 };
 
 Product.propTypes = {
-  params: PropTypes.object,
-  route: PropTypes.object
+  match: PropTypes.object,
+  prods: PropTypes.array
 };
 
 export default Product;

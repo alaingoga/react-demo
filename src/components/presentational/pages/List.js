@@ -6,7 +6,7 @@ import ProductCard from '../elements/ProductCard';
  * List of products view
  */
 const List = (props) => {
-  const prods = props.route.prods;
+  const prods = props.prods;
   return (
     <div className="row">
       {prods &&
@@ -17,7 +17,7 @@ const List = (props) => {
 };
 
 List.propTypes = {
-  route: PropTypes.object
+  prods: PropTypes.array
 };
 
 export default List;

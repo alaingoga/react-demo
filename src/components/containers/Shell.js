@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Router, Route, browserHistory } from 'react-router';
+import {
+  Link,
+  BrowserRouter as Router,
+  Route
+} from 'react-router-dom';
 import axios from 'axios';
 import Header from './../presentational/elements/Header';
 import Product from '../presentational/pages/Product';
@@ -65,26 +69,26 @@ export default class Shell extends Component {
 
   render() {
     return (
-      <div>
-        <Header />
-        {
-          this.state.products.length === 0 ?
-            <Spinner /> :
-            <Router history={browserHistory}>
-              <Route
-                path="/"
-                prods={this.state.products}
-                component={List}
-              />
-              <Route
-                path="/product/:id"
-                prods={this.state.products}
-                component={Product}
-              />
-              {this.props.children}
-            </Router>
-        }
-      </div>
+      <Router>
+        <div>
+          <Header />
+          {
+            this.state.products.length === 0 ?
+              <Spinner /> :
+              <div>
+                <Route
+                  exact
+                  path="/"
+                  render={props => (<List prods={this.state.products} {...props} />)}
+                />
+                <Route
+                  path="/product/:id"
+                  render={props => (<Product prods={this.state.products} {...props} />)}
+                />
+              </div>
+          }
+        </div>
+      </Router>
     );
   }
 }
